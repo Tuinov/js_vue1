@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>product</title>
+<!--    <link rel="stylesheet" href="style.css">-->
+ 
+ <style>
+     div{
+         border: 1px solid black;
+         
+     }
+    </style>
+  
+</head>
+<body>
+
+   <main id="app">
+     <header>
+         <input type="text" v-model="searchQuery">
+         
+         <button>корзина</button>
+     </header>
+   <div class="goods">
+       <div v-for="item in filteredItems">
+           <h3>{{item.name}} </h3>
+           <span>{{item.price}} </span>
+           <button>buy</button>
+       </div>
+   </div>
+   
+   <div id="productsWrap"></div>
+   
+    <div id="tmplCartItem" style="display: none;">
+   	 <div class="items">
+   	   <div class="mainImg">
+            <img class="imageCart" src="#" alt="foto">
+        </div>
+        <div class="description">
+              <h3 class="name"></h3>
+               <p>Color: <span>Red</span> </p>
+               <p>Size: <span>XII</span> </p>
+        </div>
+        <div class="cost"></div>
+        
+        <div class="quantity"></div>
+        <button>Удалить</button>
+   	 </div>
+   </div>
+   
+  <div id="cart"></div>
+  
+   <button id="control">trening</button>
+   
+   </main>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="app.js"></script>
+    <script src="product.js"></script>
+</body>
+</html>
+   
